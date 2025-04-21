@@ -1,0 +1,288 @@
+body {
+  margin: 0;
+  transition: background-color 0.3s ease;
+  max-width: 100%;
+}
+
+body.dark {
+  background-color: #1a1a1a;
+}
+
+body.light {
+  background-color: #ffffff;
+}
+
+.main-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  transition: all 0.3s ease;
+}
+
+.container.dark {
+  color: #ffffff;
+}
+
+.container.light {
+  color: #000000;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 0.8rem 1rem;
+}
+
+.main-logo {
+  width: 80px;
+}
+
+.dark .main-logo {
+  filter: invert(1);
+}
+
+.controls {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.language-select {
+  padding: 5px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  background-color: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+
+.dark .language-select {
+  border-color: #444;
+  background-color: #2a2a2a;
+  color: #ffffff;
+}
+
+.theme-toggle {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 50%;
+}
+
+.add-form {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  align-items: center;
+}
+
+
+
+.todo-input,
+.category-select,
+.priority-select,
+.date-input {
+  padding: 10px 12px;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: inherit;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+  margin: 0.5rem;
+}
+
+.todo-input:focus,
+.category-select:focus,
+.priority-select:focus,
+.date-input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+.dark .todo-input,
+.dark .category-select,
+.dark .priority-select,
+.dark .date-input {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.todo-input {
+  width: 100%;
+  text-transform: capitalize;
+}
+
+.category-select,
+.priority-select {
+  width: 47%;
+  text-transform: capitalize;
+}
+
+.date-input {
+  width: 42%;
+}
+
+.add-button {
+  padding: 14px 20px;
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  width: 47%;
+  margin: 0 0.5rem;
+}
+
+.add-button:hover {
+  background-color: #2563eb;
+  transform: translateY(-1px);
+}
+
+.delete-icon {
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+}
+
+.dark .delete-icon {
+  color: #999;
+}
+
+.todo-list {
+  list-style: none;
+  padding: 0;
+}
+
+
+.todo-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 1rem;
+  margin-bottom: 0.75rem;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  position: relative;
+  /* border-left: 4px solid transparent; */
+  transition: all 0.2s ease;
+  overflow: hidden;
+  border: 1px solid transparent;
+}
+
+.todo-item:hover {
+  transform: translateX(4px);
+}
+
+.todo-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.todo-meta {
+  display: flex;
+  gap: 8px;
+  font-size: 0.8em;
+}
+
+.category-tag {
+  padding: 2px 6px;
+  border-radius: 12px;
+  font-size: 0.8em;
+}
+
+.category-tag.personal {
+  background-color: #e9d5ff;
+  color: #000;
+}
+
+.category-tag.work {
+  background-color: #bfdbfe;
+  color: #000;
+}
+
+.category-tag.shopping {
+  background-color: #bbf7d0;
+  color: #000;
+}
+
+.category-tag.health {
+  background-color: #fed7aa;
+  color: #000;
+}
+
+.priority-high {
+  border-color: #ef4444;
+}
+
+.priority-high::before {
+  content: "";
+  position: absolute;
+  left: -15px;
+  top: -15px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #ef4444;
+  box-shadow: 0 0 15px #ef4444;
+}
+
+.priority-medium {
+  border-color: #F59E0B;
+}
+
+.priority-medium::before {
+  content: "";
+  position: absolute;
+  left: -15px;
+  top: -15px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #F59E0B;
+  box-shadow: 0 0 15px #F59E0B;
+}
+
+.priority-low {
+  border-color: #10b981;
+}
+
+.priority-low::before {
+  content: "";
+  position: absolute;
+  left: -15px;
+  top: -15px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #10b981;
+  box-shadow: 0 0 15px #10b981;
+}
+
+.due-date {
+  color: #666;
+}
+
+.dark .due-date {
+  color: #999;
+}
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.6;
+}

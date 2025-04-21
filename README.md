@@ -1,4 +1,6 @@
 ## Running React on Replit
+node_modules
+
 
 [React](https://reactjs.org/) is a popular JavaScript library for building user interfaces.
 
